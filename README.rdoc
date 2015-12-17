@@ -1,28 +1,23 @@
-== README
+# Rails Mongoid Twitter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic twitter clone built so I can understand how rails works with
+MongoDB. Mongoid has been used as the ODM to map the Rails models to the MongoDB
+documents.
 
-Things you may want to cover:
+Application is tested with RSpec and uses Capybara for the feature tests.
 
-* Ruby version
+## Steps I followed to Set Up
+application was generated with switch 
 
-* System dependencies
+```sh
+rails new myapp --skip-active-record
+```
+gemfile requires
+```sh
+gem 'mongoid', '~> 5.0.0'
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+after bundling run the below command to generate the *mongoid.yml*
+```sh
+rails g mongoid:config
+```
