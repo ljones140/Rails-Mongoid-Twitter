@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    current_user.tweets.create(tweet_params)
     redirect_to tweets_path
   end
 

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'creating tweets' do
 
-  let(:user) { create(:user) }
+  let(:user) { create(:user, email: "test@test.com") }
 
   context 'user not logged in' do
 
@@ -20,6 +20,7 @@ feature 'creating tweets' do
       fill_in "Body", with: "test tweet"
       click_button "post tweet"
       expect(page).to have_content "test tweet"
+      expect(page).to have_content "author: test@test.com"
     end
 
   end

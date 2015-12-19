@@ -6,3 +6,4 @@
 - if @tweets.any?
   - @tweets.each do |tweet|
     %p= tweet.body
+    %p author: #{tweet.user.email}
