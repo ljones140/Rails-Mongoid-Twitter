@@ -23,6 +23,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # mongo db odm
 gem 'mongoid', '~> 5.0.0'
 gem "haml-rails", "~> 0.9"
+gem 'bson_ext'
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -48,4 +50,6 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner', :git => 'https://github.com/DatabaseCleaner/database_cleaner.git'
 end
