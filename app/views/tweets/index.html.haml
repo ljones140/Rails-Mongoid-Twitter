@@ -3,7 +3,6 @@
     = f.label :body
     = f.text_field :body
     = f.submit "post tweet"
-- if @tweet_view_model.all_tweets.any?
   - @tweet_view_model.all_tweets.each do |tweet|
     %p= tweet.body
     %p author: #{tweet.user.email}
