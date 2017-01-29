@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 feature 'user can sign in and out' do
-
   context 'user not signed in on homepage' do
-
     it 'should see sign in and sing up links' do
       visit root_path
       expect(page).to have_content('Sign in')
@@ -17,7 +15,6 @@ feature 'user can sign in and out' do
   end
 
   context 'user signed in on homepage' do
-
     before do
       user = create(:user)
       sign_in_as(user)

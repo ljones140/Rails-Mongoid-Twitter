@@ -51,6 +51,5 @@ group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
-  gem 'database_cleaner', :git => 'https://github.com/DatabaseCleaner/database_cleaner.git'
   gem 'mongoid-rspec', '3.0.0'
 end
